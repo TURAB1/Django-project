@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'asiatours.apps.AsiatoursConfig'
+
+    'django_extensions',
+    'rest_framework',
+    'asiatours.apps.AsiatoursConfig',
+    'api.apps.ApiConfig',
 ]
 
 MIDDLEWARE = [
@@ -121,4 +125,11 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
+#grah model setting
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'api.User'
