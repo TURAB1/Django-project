@@ -5,3 +5,6 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("Asia tour agency!")
+
+def render_template(request):
+    return render(request, 'tours/index.html')
